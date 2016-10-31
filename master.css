@@ -1,0 +1,63 @@
+body
+{		
+		background-image: url("images/pattern.png"); 
+		background-color: #F5F5DC;
+		font-family: 'Raleway', sans-serif;
+		
+
+}
+
+.page 
+{
+	width: 800px; 
+	margin: 0% 25% 0% 25%; 
+	height: 100%; 
+	padding: 0px;
+	font-style: normal; 
+	font-size: 16px; 
+	background-color: #F0F0FF;
+	//box-shadow: 10px 10px 10px grey;
+}
+
+figure.logo
+{
+	width: 300px; 
+	height: 300px; 
+	margin: 0% 25% 0% 25%;  
+}
+
+figure.logo img
+{
+	width: 100%; 
+	height: 100%; 
+	margin: 0px;
+}
+
+ul.navMenu
+{
+	list-style-type: none; 
+	margin: 0px; 
+	padding: 0px; 
+	overflow: hidden; 
+	background-color: #0000FF; 
+	margin: 0px; 
+}
+
+li.navMenuItem
+{
+	float: left; 
+}
+
+li.navMenuItem a
+{
+	display: block; 
+	color: white; 
+	text-align: center; 
+	padding: 14px 16px; 
+	text-decoration: none; 
+}
+
+div.content
+{
+	width: 100%;
+}

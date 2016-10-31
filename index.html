@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Whack MD</title>
+	<link href="master.css" type = "text/css" rel = "stylesheet" />
+	<link href="loader.css" type="text/css" rel = "stylesheet" v/>
+	<link href="index.css" type = "text/css" rel = "stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="index.js"></script>
+</head>
+<body onload="hideLoader()">
+
+	<!-- start of sidebar -->
+	<div id="sidebar">
+		<img src="images/logo.png" style="width: 90%; padding: 10px"><img>
+		<ul>
+			<li id="symptoms" style="list-style-type:none"><h1>My Symptoms</h1></li>
+		</ul>
+		<button onclick="cancer()">Diagnose Me</button>
+	</div>
+	<!-- end of sidebar -->
+
+	<!-- start of page -->
+	<div class = "page">
+
+		<!-- start of navigation bar -->
+		<div class = "navigation">
+			<ul class = "navMenu">
+				<li class = "navMenuItem" onclick='alert("Whack MD Symptom Diagnoser \nVersion 1.0 \n\nCreated for HackNC by:\nPavan D.\nPatrick L.\nSamuel C. \nScott C.")'>
+					<a href = "#">About</a>
+				</li>
+			</ul>
+		</div>
+		<!-- end of navigation bar -->
+
+		<!-- start of content -->
+		<div class = "content">
+
+			<!-- search bar -->
+			<div class = "input_sec">
+				<input type = "text" placeholder="Enter symptoms" name = "txtSymptoms" id = "txtSymp" class = "frmInput" />
+				<button id = "btnSearch" onclick = 'getData(document.getElementById("txtSymp").value)'>Search</button>
+			</div>
+
+			<!-- loading animation -->
+			<div style="width: 100%; text-align: center;"><div class = "loader"></div>
+			</div>
+
+			<!--holds all urbandictionary results -->
+			<div id="$ID">
+				<h1 style="text-align: center;">Enter search term</h1>
+			</div>
+
+			<!-- information -->
+			<div id = "Information" class = "sec">
+				<h1 style="padding:0px 10px">Information</h1>
+				<p style="padding:10px"> 
+					WhackMD is an online Symptom search application that helps users 
+					diagnose potential illnesses they may have based on provided symptoms. 
+				</p>
+			</div>
+
+			<!-- instructions -->
+			<div id = "instructions" class = "sec">
+				<h1 style="padding:0px 10px">Instructions</h1>
+				<p style="padding:10px"> 
+					To use WhackMD, simply enter your symptoms in the text field and 
+					click search. It is that simple. From there, just select various options 
+					to get more information regarding potential diseases.
+				</p>
+			</div>
+		</div>
+		<!-- end of content -->
+	</div>
+	<!-- end of page -->
+</body>
+</html>
