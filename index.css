@@ -1,8 +1,28 @@
 .frmInput {
 	border: 2px solid red;
 	border-radius: 4px;
-	padding: 3px;
+	padding: 20px;
+	font-size: 15px;
 	width: 200px;
+}
+
+#btnSearch {
+	width: 150px;
+	height: 50px;
+	margin: 20px 20px;
+	text-align: center;
+	border-radius: 5px;
+	background-color: #DD4455;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	font-weight: bold;
+	color: #552233;
+	box-shadow: 2px 2px 10px #AAAAAA;
+}
+
+#btnSearch:hover {
+	color: #FFFFFF;
+	background-color: #FF8888;
 }
 
 .suggested_words {
@@ -29,8 +49,8 @@ div.input_sec {
 	width: 100%;
 }
 
-div.input_sec input[type=text] {
-	margin: 0% 25% 0% 25%;
+.input_sec {
+	margin: 10px 25%;
 }
 
 figure.logo {
@@ -54,14 +74,14 @@ figure.logo img {
 	list-style-type: none;
 	font-size: 12pt;
 	text-align: center;
-	box-shadow: 10px 10px 15px grey;
+	box-shadow: 5px 10px 15px #AAAAAA;
 }
 
 div.sec {
 	width: 50%;
 	height: 200px; 
 	display: inline; 
-	float: left; 
+	float: left;
 	padding: 0px;
 	background-color: #FFF0F0;
 	box-shadow: 1px 5px 3px #AAAAAA;

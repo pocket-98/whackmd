@@ -1,3 +1,11 @@
+$(document).ready(function() {
+	$("#txtSymp").keyup(function(event){
+		if(event.keyCode == 13){
+			$("#btnSearch").click();
+		}
+	});
+});
+
 function hideLoader() {
 	$(".loader").hide();
 }

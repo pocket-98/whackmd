@@ -7,22 +7,17 @@ import json
 baseUrl = "http://api.urbandictionary.com/v0/"
 
 def generateTable(ID, item, name, file):
-	#read from file
-	f = open(file,'r').read()
-	#replace $ID, $name, and $item
-	f = f.replace("$ID",ID).replace("$name", name).replace("$item", item)
-	return f
+	#read from search_template.html and replace $ID and $item
+	f = open(file,'r')
+	return f.read().replace("$ID",ID).replace("$name", name).replace("$item", item)
 
 def httpRequest(url):
-	#returns string contents of http get request to url
 	return urllib3.PoolManager().request('GET', url).data.decode('utf-8')
 
 def autocomplete(term):
-	#returns json from urbandictionary autocomplete
 	return json.loads(httpRequest(baseUrl + "autocomplete?term=" + term.replace(" ","+")))
 
 def search(term):
-	#returns the tags, names, and corresponding definitions from urbandictionary search
 	data = json.loads(httpRequest(baseUrl + "define?term=" + term.replace(" ","+")))
 	tags = data['tags']
 	definitions = []
@@ -33,19 +28,15 @@ def search(term):
 	return tags, names, definitions
 
 def main():
-	#use argument to search urbandictionary for tags and definitions
-	
-	#determine term from commandline argument; replace spaces with '+'
+	#use argument to search urbandictionary for autocomplete, tags, and definition
 	term = ""
 	if len(sys.argv) > 1:
 		term = sys.argv[1].replace(" ", "+")
-
-	#get autocomplete, tags, names, and definitions for term
 	autoList = autocomplete(term)
 	tagList, nameList, defList = search(term)
 
-	#print definitions in table
-	print("<h2 class='heading2'>Definitions</h2>\n<table>")
+	#print definitions
+	print("<h2 class='heading2'>Definitions</h2><table>")
 	for i in range(len(defList)):
 		print(generateTable(str(i+1), defList[i], nameList[i], "template_define.html"))
 	#print tags

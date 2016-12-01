@@ -18,7 +18,7 @@
 	<div id="sidebar">
 		<img src="images/logo.png" style="width: 90%; padding: 10px"><img>
 		<ul>
-			<li id="symptoms" style="list-style-type:none"><h1>My Symptoms</h1></li>
+			<li id="symptoms" style="list-style-type:none"><h1 style="text-align:justify;white-space: nowrap;">My Symptoms</h1></li>
 		</ul>
 		<button onclick="cancer()">Diagnose Me</button>
 	</div>
@@ -30,8 +30,8 @@
 		<!-- start of navigation bar -->
 		<div class = "navigation">
 			<ul class = "navMenu">
-				<li class = "navMenuItem" onclick='alert("Whack MD Symptom Diagnoser \nVersion 1.0 \n\nCreated for HackNC by:\nPavan D.\nPatrick L.\nSamuel C. \nScott C.")'>
-					<a href = "#">About</a>
+				<li class = "navMenuItem" onclick='alert("Whack MD Symptom Diagnoser \nVersion 1.1 \n\nCreated for HackNC by:\nPavan D.\nPatrick L.\nSamuel C. \nScott C.")'>
+					<a href = "#" style="font-weight: bold">About</a>
 				</li>
 			</ul>
 		</div>
@@ -42,13 +42,12 @@
 
 			<!-- search bar -->
 			<div class = "input_sec">
-				<input type = "text" placeholder="Enter symptoms" name = "txtSymptoms" id = "txtSymp" class = "frmInput" />
-				<button id = "btnSearch" onclick = 'getData(document.getElementById("txtSymp").value)'>Search</button>
+				<input type = "text" placeholder="Enter symptoms" id = "txtSymp" class = "frmInput" />
+				<input type = "submit" id = "btnSearch" onclick = 'getData(document.getElementById("txtSymp").value)' value="Search">
 			</div>
 
 			<!-- loading animation -->
-			<div style="width: 100%; text-align: center;"><div class = "loader"></div>
-			</div>
+			<div class="loader"></div>
 
 			<!--holds all urbandictionary results -->
 			<div id="$ID">
